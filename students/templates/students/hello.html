@@ -1,0 +1,7 @@
+<h1>قائمة الطلاب</h1>
+
+<ul>
+{% for student in students %}
+    <li>{{ student.name }} - {{ student.grade }}</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+<h1>أضف طالب جديد</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">إرسال</button>
+</form>

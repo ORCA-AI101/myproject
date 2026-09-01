@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from students.models import Student  
 from students.forms import StudentForm 
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def hello(request):
     students = Student.objects.all()
     return render(request, 'students/hello.html', {'students': students})
+
+@login_required
 def add_student(request):
     if request.method == 'POST':
         form = StudentForm(request.POST)

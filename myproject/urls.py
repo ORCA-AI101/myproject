@@ -23,4 +23,5 @@ urlpatterns = [
     path('hello/', views.hello),
     path('add/', views.add_student),
     path('login/', auth_views.LoginView.as_view()),
+    path('api/students/', views.student_list_api),
 ]
